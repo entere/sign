@@ -103,7 +103,7 @@ access_key, timestamp, screen_name, format 其中不包括空值参数
 
 3、计算签名 
 
-对上面的$str 进行md5 签名：
+对上面的签名串进行 md5 签名：
 
     md5(f827182b1051075e601c73ac1ae329faaccess_key7576762362formatjsonscreen_nameenteretimestamp1438279283630)
 

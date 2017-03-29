@@ -110,9 +110,9 @@ class Sign {
 	 * @return string 签名结果
 	 */
 	public static function md5Sign($preSign, $secret) {
-		$preSign = $preSign . $secret;
+		$preSign = $secret . $preSign;
 		
-		return strtoupper(md5($preSign));
+		return strtolower(md5($preSign));
 	}
 
 }

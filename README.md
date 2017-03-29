@@ -78,7 +78,7 @@ $signSecret = "f827182b1051075e601c73ac1ae329fa";
 }
 ```
 
-** 1. 按参数名进行升序排列 ** 
+**1. 按参数名进行升序排列** 
 
 timestamp, screen_name, format 其中不包括空值参数
 
@@ -92,7 +92,7 @@ timestamp, screen_name, format 其中不包括空值参数
     
 }
 ```
-** 2. 构造签名串 ** 
+**2. 构造签名串** 
 
 以 url 参数的方式 构建签名串，格式如下：
     
@@ -108,14 +108,17 @@ timestamp, screen_name, format 其中不包括空值参数
     
     
 
-** 3. 计算签名 ** 
+**3. 计算签名** 
+
 对上面的$str 进行md5 签名：
 
     md5(format=json&screen_name=entere&timestamp=1438279283630f827182b1051075e601c73ac1ae329fa)
 
-并把值转成小写：874f7bcbb08cf72afca63c68b2209bb4
+并把值转成小写：
 
-** 4. 添加签名 ** 
+    874f7bcbb08cf72afca63c68b2209bb4
+
+**4. 添加签名** 
 
 将计算的签名值以sign参数名，附加到URL请求中。一个典型的API请求如下所示
 
@@ -124,7 +127,7 @@ timestamp, screen_name, format 其中不包括空值参数
 
 ### 3、API比对参数
 
-服务端 API 拿到参数后，以同样的方式签名（去掉 $sign参数），能过比对 $sign 的值即可判断请求是否被篡改。
+服务端 API 拿到参数后，以同样的方式签名（去掉 $sign 参数），能过比对 $sign 的值即可判断请求是否被篡改。
 
 
 

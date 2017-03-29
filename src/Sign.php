@@ -28,13 +28,28 @@ class Sign {
 		$params_filter = array();
 
 		while (list ($key, $value) = each ($params)) {
-			if($key == "sign" || $key == "sign_type" || $value == ""){
+			if($key == "sign" || $key == "sign_type" || self::checkEmpty($value) === true){
 				continue;
 			} else {
 				$params_filter[$key] = $params[$key];
 			}
 		}
 		return $params_filter;
+	}
+
+	/**
+	 * 检测值是否为空 
+	 * @param    string                   		$value 待检测的值
+	 * @return   boolean                     	 null | "" | unsset 返回 true;
+	 */
+	protected static function checkEmpty($value) {
+		if (!isset($value))
+			return true;
+		if ($value === null)
+			return true;
+		if (trim($value) === "")
+			return true;
+		return false;
 	}
 
 	/**

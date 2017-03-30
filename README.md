@@ -19,7 +19,8 @@ require_once("./src/Sign.php");
 use Entere\Sign\Sign;
 $params = ['access_key'=>'7576762362','timestamp'=>'1439279383630','screen_name'=>'entere','format'=>'json'];
 $secret = 'f827182b1051075e601c73ac1ae329fa';
-print_r(Sign::generateSign($params,$secret));
+$result = Sign::generateSign($params,$secret);
+return $result;
 
 
 ?>
@@ -44,7 +45,8 @@ class WelcomeController extends Controller {
     {
         $params = ['access_key'=>'7576762362','timestamp'=>'1439279383630','screen_name'=>'entere','format'=>'json'];
         $secret = 'f827182b1051075e601c73ac1ae329fa';
-        print_r(Sign::generateSign($params,$secret));
+        $result = Sign::generateSign($params,$secret);
+        return $result;
 
     }
 }

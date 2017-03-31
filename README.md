@@ -4,9 +4,8 @@
  安装包文件
 
   ```shell
-  composer require "entere/sign:dev-master"
+  composer require "entere/sign:1.0.0"
   ```
-
 
 # 使用
 

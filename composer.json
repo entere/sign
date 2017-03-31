@@ -1,6 +1,13 @@
 {
     "name": "entere/sign",
+    "description": "API签名，采用API签名，保证请求的数据正确性、保证接口安全。",
     "license": "MIT",
+    "type": "library",
+    "keywords": [
+         "sign",
+         "API签名",
+         "API安全"
+    ],
     "authors": [
         {
             "name": "entere",

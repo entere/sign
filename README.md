@@ -3,7 +3,7 @@
  安装包文件
 
   ```shell
-  composer require "entere/sign:1.0.0"
+  composer require "entere/sign:v1.0.0"
   ```
 
 # 使用
